@@ -2,10 +2,11 @@ import React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import * as Sharing from 'expo-sharing';
+import { useNavigation } from '@react-navigation/native';
 
-export default function Home({navigation}) {
+export default function Home() {
   let [selectedImage, setSelectedImage] = React.useState(null);
-
+const navigation= useNavigation()
   let openImagePickerAsync = async () => {
     let permissionResult = await ImagePicker.requestCameraRollPermissionsAsync();
 
@@ -53,7 +54,7 @@ export default function Home({navigation}) {
         <Text style={styles.buttonText}>Pick a photo</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={()=>{
-        navigation.navigate("Profile")
+       navigation.navigate('Signin');
       }} style={styles.Navbutton}>
         <Text style={styles.buttonText}>Navigate to profile Screeen </Text>
       </TouchableOpacity>

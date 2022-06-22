@@ -1,36 +1,31 @@
-import * as React from 'react';
-import { NavigationContainer, StackActions } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Home from './home';
-import Profile from './Profile';
-import { NativeBaseProvider, Box } from "native-base";
+import * as React from "react";
+import { NavigationContainer, StackActions } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Home from "./home";
+import { NativeBaseProvider, Box,  } from "native-base";
+import Sigin from "./Signin";
+import Sigup from "./Signup";
+import AppDrawer from "./Drawer";
+import MyDrawer from "./Drawer";
 
 const Stack = createNativeStackNavigator();
 const App = () => {
-
-
   return (
-    <NativeBaseProvider>
-    <NavigationContainer>
-      <Stack.Navigator>
-<Stack.Screen
-name='Home'
-component={Home}
+    <NativeBaseProvider >
+      <NavigationContainer>
+        <MyDrawer/>
+      </NavigationContainer>
+      <NavigationContainer>
 
->
-  
-</Stack.Screen>
-<Stack.Screen
-name='Profile'
-component={Profile}
+        {/* <Stack.Navigator> */}
+          {/* <Stack.Screen name="Home" component={Home}></Stack.Screen> */}
+          {/* <Stack.Screen name="Draw" component={MyDrawer}></Stack.Screen> */}
 
->
-  
-</Stack.Screen>
-
-      </Stack.Navigator>
-      {/* Rest of your app code */}
-    </NavigationContainer>
+          {/* <Stack.Screen name="Signin" component={Sigin}></Stack.Screen>
+          <Stack.Screen name="Signup" component={Sigup}></Stack.Screen> */}
+        {/* </Stack.Navigator> */}
+        {/* Rest of your app code */}
+      </NavigationContainer>
     </NativeBaseProvider>
   );
 };
