@@ -7,6 +7,7 @@ import Sigin from "./Signin";
 import Sigup from "./Signup";
 import AppDrawer from "./Drawer";
 import MyDrawer from "./Drawer";
+import BottomNav from "./BottomTabs";
 
 const Stack = createNativeStackNavigator();
 const App = () => {

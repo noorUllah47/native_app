@@ -13,6 +13,7 @@ import {
 import { Box, Button, Heading, Input, Link, useToast } from "native-base";
 import { MaterialIcons } from "@expo/vector-icons";
 import Vector from "./Vector";
+import BottomNav from "./BottomTabs";
 function NBBox(props) {
   return <Box p="5" m="2" borderRadius="md" bg="primary.200" {...props} />;
 }
@@ -109,7 +110,6 @@ function Sigin({ navigation }) {
               Sign Up
             </Link>
         </Box>
-        <Vector/>
       </SafeAreaView>
     </>
   );

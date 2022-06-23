@@ -25,6 +25,7 @@ import Home from "./home";
 import Sigin from "./Signin";
 import Sigup from "./Signup";
 import { StyleSheet } from "react-native";
+import BottomNav from "./BottomTabs";
 const Drawer = createDrawerNavigator();
 function Component(props) {
   return (
@@ -166,7 +167,7 @@ export default function MyDrawer() {
         <Drawer.Screen name="home" component={Component} />
         <Drawer.Screen name="Signin" component={Sigin} />
         <Drawer.Screen name="Signup" component={Sigup} />
-        <Drawer.Screen name="Archive" component={Component} />
+        <Drawer.Screen name="Archive" component={BottomNav} />
         <Drawer.Screen name="Trash" component={Component} />
         <Drawer.Screen name="Spam" component={Component} />
       </Drawer.Navigator>
